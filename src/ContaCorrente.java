@@ -1,10 +1,21 @@
 
 public class ContaCorrente {
+	double saldo;
 
-	public void sacar(double valor) {};
 	
-	public void depositar(double valor) {};
+	public ContaCorrente(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public void sacar(double valor) {
+		saldo = saldo - valor;
+	};
+	public void depositar(double valor) {
+		saldo = saldo + valor;
+	};
 	
-	
-	
+	public double showSaldo() {
+		return saldo;
+		
+	}
 }
