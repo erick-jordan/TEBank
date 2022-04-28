@@ -8,14 +8,18 @@ public class ContaCorrente {
 	}
 
 	public void sacar(double valor) {
-		saldo = saldo - valor;
+		if(this.saldo == 0) {
+			this.saldo = 0;
+		}else {
+		this.saldo = saldo - valor;
+		}
 	};
 	public void depositar(double valor) {
-		saldo = saldo + valor;
+		this.saldo = saldo + valor;
 	};
 	
 	public double showSaldo() {
-		return saldo;
+		return this.saldo;
 		
 	}
 }
